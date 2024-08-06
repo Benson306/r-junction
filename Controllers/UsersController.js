@@ -185,6 +185,8 @@ app.post('/signup', urlEncoded, (req, res)=>{
     let role = req.body.role;
     let company_name = req.body.company_name;
     let otp = generateStrongPassword(email);
+    let currentDate = new Date();
+    let date = currentDate.toLocaleDateString('en-GB');
 
     UsersModel.find({ email : email})
     .then(data => {
@@ -200,7 +202,8 @@ app.post('/signup', urlEncoded, (req, res)=>{
                     first_name, 
                     last_name, 
                     role, 
-                    otp
+                    otp,
+                    created_at: date
                 }).save()
                 .then((result)=>{
                     const options = { 
