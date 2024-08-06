@@ -22,7 +22,6 @@ app.use((req, res, next) => {
     next();
 });
 
-
 let UsersController = require('./Controllers/UsersController');
 app.use('/', UsersController);
 
