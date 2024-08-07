@@ -9,7 +9,8 @@ let UsersSchema =  new mongoose.Schema({
     role : String,
     created_at : String,
     email_confirmation : Boolean,
-    otp: String
+    otp: String,
+    default_password: Boolean
 });
 
 let UsersModel = mongoose.model('users', UsersSchema);
