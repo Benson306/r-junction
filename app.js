@@ -28,6 +28,9 @@ app.use('/', UsersController);
 let JobsController = require('./Controllers/JobsController');
 app.use('/', JobsController);
 
+let CandidateProfileController = require('./Controllers/CandidateProfileController');
+app.use('/', CandidateProfileController);
+
 let port = process.env.PORT || 5000;
 
 app.listen(port, ()=>{
