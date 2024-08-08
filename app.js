@@ -25,6 +25,9 @@ app.use((req, res, next) => {
 let UsersController = require('./Controllers/UsersController');
 app.use('/', UsersController);
 
+let JobsController = require('./Controllers/JobsController');
+app.use('/', JobsController);
+
 let port = process.env.PORT || 5000;
 
 app.listen(port, ()=>{
