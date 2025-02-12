@@ -22,6 +22,10 @@ app.use((req, res, next) => {
     next();
 });
 
+app.get("/", (req, res)=>{
+    res.json("Recruitment Junction");
+});
+
 let UsersController = require('./Controllers/UsersController');
 app.use('/', UsersController);
 
